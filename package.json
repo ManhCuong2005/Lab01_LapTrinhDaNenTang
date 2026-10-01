@@ -1,0 +1,33 @@
+{
+  "name": "vku-field-inspection",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "server": "node server.mjs",
+    "verify:pwa": "npm run build && node scripts/verify-pwa.mjs",
+    "android:add": "cap add android",
+    "android:sync": "npm run build && cap sync android",
+    "android:build": "npm run android:sync && cd android && gradlew.bat assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.0",
+    "@capacitor/camera": "^7.0.0",
+    "@capacitor/core": "^7.4.0",
+    "@capacitor/geolocation": "^7.1.0",
+    "@capacitor/network": "^7.0.0",
+    "idb": "^8.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.0",
+    "docx": "^9.8.1",
+    "docx-preview": "^0.4.1",
+    "pdf-lib": "^1.17.1",
+    "playwright-core": "^1.63.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.0"
+  }
+}

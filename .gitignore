@@ -1,0 +1,14 @@
+node_modules/
+dist/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.apk
+surveys.json
+.env
+.env.local
+.env.*.local
+firebase/.firebaserc
+output/qa/
+output/bao-cao-vku.html
